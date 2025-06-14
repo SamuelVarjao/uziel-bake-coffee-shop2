@@ -1,0 +1,16 @@
+# Ignorar arquivos e pastas desnecessárias
+.DS_Store
+node_modules/
+*.log
+*.tmp
+*.bak
+*.exe
+*.zip
+*.mp4
+*.pdf
+*.png
+*.jpg
+*.jpeg
+.vscode/
+.idea/
+*.swp

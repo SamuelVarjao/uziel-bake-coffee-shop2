@@ -1,0 +1,252 @@
+/* Resetando margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configurações do Body */
+body {
+    font-family: 'Poppins', sans-serif; /* Usando a fonte Poppins */
+    background-color: #f5f5f5;
+}
+
+/* Cabeçalho fixo */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1e3d58; /* Azul marinho */
+    padding: 1rem;
+    color: white;
+    z-index: 1000; /* Garante que o cabeçalho fique sobre os outros conteúdos */
+    display: flex;
+    justify-content: space-between; /* Alinha logo à esquerda e menu à direita */
+    align-items: center;
+}
+
+/* Logo no cabeçalho */
+header .logo img {
+    max-height: 80px; /* Aumentei o tamanho da logo */
+}
+
+/* Navegação no cabeçalho */
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px;
+}
+
+/* Alteração da cor do hover para um tom bege */
+header nav ul li a:hover {
+    background-color: #f1e1b3; /* Tom de bege suave */
+    border-radius: 5px;
+}
+
+/* Ajuste do conteúdo para que não sobreponha o cabeçalho */
+section {
+    padding: 80px 20px 20px; /* Ajuste para compensar o cabeçalho fixo */
+}
+
+/* Ajuste da seção Início com imagem de fundo */
+#inicio {
+    background-image: url('imagens/foto_frente_café.jpg');
+    background-size: cover; /* Garante que a imagem cubra toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Mantém a imagem fixa enquanto o conteúdo é rolado */
+    color: white;
+    padding: 100px 20px; /* Ajustei o padding para que a imagem apareça melhor */
+    text-align: center; /* Centraliza o texto */
+    height: 100vh; /* Faz com que a seção ocupe 100% da altura da tela */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+}
+
+#inicio h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+#inicio p {
+    font-size: 1.5rem;
+    text-align: justify; /* Justifica o texto */
+    max-width: 800px; /* Limita a largura do texto para não ficar muito largo */
+    margin: 0 auto; /* Centraliza o texto horizontalmente */
+}
+
+/* Estilo para a seção Quem Somos */
+#quem-somos {
+    background-color: #1e3d58; /* Azul marinho */
+    color: white;
+    padding: 50px 20px;
+}
+
+#quem-somos .content {
+    display: flex;
+    justify-content: flex-start; /* Deixa o texto e a imagem mais próximos */
+    align-items: center;
+    gap: 2px; /* Reduzindo ainda mais o espaço entre o texto e a imagem */
+}
+
+#quem-somos .texto {
+    flex: 1;
+    font-size: 1.3rem; /* Aumentei o tamanho do texto */
+    text-align: justify; /* Justificando o texto */
+    line-height: 1.6; /* Melhorando a legibilidade */
+    max-width: 60%; /* Limita a largura do texto para que ele não fique tão largo */
+}
+
+#quem-somos .imagem {
+    flex: 1;
+    text-align: center;
+}
+
+#quem-somos .imagem img {
+    max-width: 100%;
+    height: auto; /* Garantindo que a imagem seja proporcional */
+    max-height: 500px; /* Aumentei um pouco a altura da imagem */
+    border-radius: 10px;
+}
+
+/* Ajustes adicionais para garantir que a imagem e o texto fiquem bem proporcionados */
+@media (max-width: 768px) {
+    #quem-somos .content {
+        flex-direction: column; /* Em telas menores, coloca o texto e a imagem em coluna */
+        align-items: center;
+    }
+
+    #quem-somos .imagem {
+        text-align: center;
+    }
+
+    #quem-somos .imagem img {
+        max-height: 250px; /* Reduzindo a altura da imagem em telas menores */
+    }
+}
+
+
+/* Estilo para as seções */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #1e3d58; /* Azul marinho */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+/* Estilo para os botões flutuantes */
+.social-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Garante que os botões fiquem sempre visíveis */
+}
+
+.social-button {
+    display: block;
+    margin-bottom: 20px;
+    width: 90px; /* Aumentei o tamanho dos ícones */
+    height: 90px; /* Aumentei o tamanho dos ícones */
+    border-radius: 50%; /* Deixa os botões redondos */
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-button img {
+    width: 80px; /* Tamanho consistente para as imagens */
+    height: 80px; /* Tamanho consistente para as imagens */
+    object-fit: contain; /* Ajuste para garantir que a imagem não distorça */
+}
+
+/* Estilo para a seção de Contato */
+#contato {
+    background-color: #123456; /* Azul mais escuro para o fundo */
+    color: white;
+    padding: 30px 20px;
+}
+
+.contato-content {
+    display: flex; /* Usando flexbox para organizar os elementos na mesma linha */
+    justify-content: flex-start; /* Alinha os itens ao início */
+    align-items: center;
+    gap: 20px; /* Espaço entre a imagem e o texto */
+}
+
+.contato-image img {
+    max-width: 500px; /* Ajusta o tamanho da imagem */
+    max-height: 500px; /* Garante que a imagem não ultrapasse o tamanho desejado */
+    border-radius: 10px;
+}
+
+.separator {
+    font-size: 5rem; /* Tamanho do separador */
+    color: white; /* Cor branca para o separador */
+    margin: 0 20px; /* Espaçamento à esquerda e à direita do separador */
+}
+
+.contato-text {
+    flex: 1; /* Ocupa o restante do espaço disponível */
+    text-align: left;
+}
+
+.contato-text h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.contato-text p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #0f1e2a; /* Azul mais escuro para o fundo do rodapé */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilo para a galeria */
+.gallery {
+    display: flex; /* Usando flexbox para organizar as imagens */
+    justify-content: space-between; /* Espaço entre as imagens */
+    flex-wrap: wrap; /* Permite que as imagens se ajustem no layout */
+    gap: 20px; /* Espaço entre as imagens */
+}
+
+.gallery figure {
+    width: 30%; /* Cada imagem ocupa 30% da largura da galeria */
+    margin: 0; /* Remove margem adicional */
+    text-align: center; /* Centraliza a legenda abaixo da imagem */
+}
+
+.gallery img {
+    width: 100%; /* Faz com que todas as imagens ocupem 100% do espaço disponível */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Bordas arredondadas para as imagens */
+}
+
+figcaption {
+    font-size: 1rem; /* Tamanho da fonte da legenda */
+    color: #333; /* Cor do texto da legenda */
+    margin-top: 10px; /* Espaçamento entre a imagem e a legenda */
+}
