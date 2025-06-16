@@ -24,6 +24,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.3s ease;
 }
 
 /* Logo no cabeçalho */
@@ -54,12 +55,27 @@ header nav ul li a:hover {
     border-radius: 5px;
 }
 
+/* Adicionar o botão de menu para mobile */
+.menu-btn {
+    display: none;
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mostrar menu na versão mobile */
+.menu-btn.active + nav ul {
+    display: block;
+}
+
 /* Ajuste do conteúdo para que não sobreponha o cabeçalho */
 section {
     padding: 80px 20px 20px;
 }
 
-/* Seção de Início */
+/* Ajuste na seção de Início */
 #inicio {
     background-image: url('imagens/foto_frente_café.jpg');
     background-size: cover;
@@ -120,15 +136,31 @@ section {
     border-radius: 10px;
 }
 
-/* Responsividade para telas menores */
+/* Ajustes para mobile */
 @media (max-width: 768px) {
-    /* Ajuste no Cabeçalho */
+    /* Ajustes para o cabeçalho no mobile */
     header {
         flex-direction: column;
-        align-items: center;
+        padding: 1rem;
     }
 
-    /* Ajuste na Seção de Início */
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Botão do menu no mobile */
+    .menu-btn {
+        display: block;
+    }
+
+    /* Ajuste no conteúdo */
     #inicio h1 {
         font-size: 2.5rem;
     }
@@ -137,7 +169,6 @@ section {
         font-size: 1.2rem;
     }
 
-    /* Seção "Quem Somos" */
     #quem-somos .content {
         flex-direction: column;
         align-items: center;
@@ -147,7 +178,6 @@ section {
         max-height: 250px;
     }
 
-    /* Ajustes nos botões de redes sociais */
     .social-buttons {
         right: 10px;
         bottom: 10px;
@@ -158,31 +188,6 @@ section {
     .social-button img {
         width: 40px;
         height: 40px;
-    }
-
-    /* Ajuste de Texto e Layout na seção de Contato */
-    #contato .contato-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #contato .contato-image img {
-        max-width: 100%;
-        max-height: 300px;
-    }
-
-    .separator {
-        font-size: 3rem;
-    }
-
-    /* Estilo da galeria */
-    .gallery {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .gallery figure {
-        width: 100%;
     }
 }
 
@@ -213,7 +218,6 @@ section {
         max-height: 200px;
     }
 
-    /* Ajustes adicionais para redes sociais */
     .social-buttons {
         right: 5px;
         bottom: 5px;
