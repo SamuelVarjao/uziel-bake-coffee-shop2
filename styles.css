@@ -66,13 +66,20 @@ header nav ul li a:hover {
 }
 
 /* Mostrar menu na versão mobile */
-.menu-btn.active + nav ul {
+header nav ul.active {
     display: block;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
 }
 
 /* Ajuste do conteúdo para que não sobreponha o cabeçalho */
 section {
-    padding: 80px 20px 20px; /* Ajustado para compensar o cabeçalho fixo */
+    padding: 80px 20px 20px;
 }
 
 /* Ajuste na seção de Início */
@@ -242,3 +249,36 @@ section {
     }
 }
 
+/* Estilo para os botões flutuantes */
+.social-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.social-button {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #1e3d58;
+    transition: 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-button img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Hover para os botões de redes sociais */
+.social-button:hover {
+    transform: scale(1.1);
+}
