@@ -18,7 +18,7 @@ header {
     left: 0;
     width: 100%;
     background-color: #1e3d58;
-    padding: 1rem;
+    padding: 0.5rem 1rem; /* Ajustei o padding para ficar mais compacto */
     color: white;
     z-index: 1000;
     display: flex;
@@ -29,7 +29,7 @@ header {
 
 /* Logo no cabeçalho */
 header .logo img {
-    max-height: 80px;
+    max-height: 60px; /* A diminuição do tamanho da logo */
 }
 
 /* Navegação no cabeçalho */
@@ -45,7 +45,7 @@ header nav ul li {
 header nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 10px;
 }
 
@@ -55,7 +55,7 @@ header nav ul li a:hover {
     border-radius: 5px;
 }
 
-/* Adicionar o botão de menu para mobile */
+/* Botão de menu para mobile */
 .menu-btn {
     display: none;
     background-color: transparent;
@@ -72,7 +72,7 @@ header nav ul li a:hover {
 
 /* Ajuste do conteúdo para que não sobreponha o cabeçalho */
 section {
-    padding: 80px 20px 20px;
+    padding: 80px 20px 20px; /* Ajustado para compensar o cabeçalho fixo */
 }
 
 /* Ajuste na seção de Início */
@@ -179,17 +179,23 @@ section {
     }
 
     .social-buttons {
-        position: fixed;
         right: 10px;
         bottom: 10px;
         width: 60px;
         height: 60px;
-        z-index: 1000;
     }
 
     .social-button img {
         width: 40px;
         height: 40px;
+    }
+
+    /* Corrigir botão de menu */
+    .menu-btn.active + nav ul {
+        display: flex; /* Mostrar o menu quando o botão for clicado */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
 }
 

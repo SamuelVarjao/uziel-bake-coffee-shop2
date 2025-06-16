@@ -1,4 +1,4 @@
-// Rolagem suave quando clicar nos links do menu
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -8,3 +8,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+function toggleMenu() {
+    const menuBtn = document.querySelector('.menu-btn');
+    const navLinks = document.querySelector('header nav ul');
+    
+    navLinks.classList.toggle('active');
+    menuBtn.classList.toggle('active');
+}
