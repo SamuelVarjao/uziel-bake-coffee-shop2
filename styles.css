@@ -18,7 +18,7 @@ header {
     left: 0;
     width: 100%;
     background-color: #1e3d58;
-    padding: 0.5rem 1rem; /* Ajustei o padding para ficar mais compacto */
+    padding: 0.5rem 1rem; 
     color: white;
     z-index: 1000;
     display: flex;
@@ -29,7 +29,7 @@ header {
 
 /* Logo no cabeçalho */
 header .logo img {
-    max-height: 60px; /* A diminuição do tamanho da logo */
+    max-height: 60px; 
 }
 
 /* Navegação no cabeçalho */
@@ -84,7 +84,7 @@ section {
 
 /* Ajuste na seção de Início */
 #inicio {
-    background-image: url('imagens/foto_frente_café.jpg');
+    background-image: url('imagens/balcao.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -129,6 +129,7 @@ section {
     text-align: justify;
     line-height: 1.6;
     max-width: 60%;
+    margin-left: 30px;
 }
 
 #quem-somos .imagem {
@@ -197,14 +198,192 @@ section {
         height: 40px;
     }
 
-    /* Corrigir botão de menu */
     .menu-btn.active + nav ul {
-        display: flex; /* Mostrar o menu quando o botão for clicado */
+        display: flex; 
         flex-direction: column;
         align-items: center;
         width: 100%;
     }
 }
+
+/* Estilo para a seção de Contato */
+#contato {
+    background-color: #123456; /* Azul mais escuro para o fundo */
+    color: white;
+    padding: 30px 20px;
+}
+
+.contato-content {
+    display: flex; /* Usando flexbox para organizar os elementos na mesma linha */
+    justify-content: flex-start; /* Alinha os itens ao início */
+    align-items: center;
+    gap: 20px; /* Espaço entre a imagem e o texto */
+}
+
+.contato-image img {
+    max-width: 500px; /* Ajusta o tamanho da imagem */
+    max-height: 500px; /* Garante que a imagem não ultrapasse o tamanho desejado */
+    border-radius: 10px;
+}
+
+.separator {
+    font-size: 5rem; /* Tamanho do separador */
+    color: white; /* Cor branca para o separador */
+    margin: 0 20px; /* Espaçamento à esquerda e à direita do separador */
+}
+
+.contato-text {
+    flex: 1; /* Ocupa o restante do espaço disponível */
+    text-align: left;
+}
+
+.contato-text h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.contato-text p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Ajustes para mobile */
+@media (max-width: 768px) {
+    #contato .contato-content {
+        flex-direction: column; /* Em telas menores, coloca o texto e a imagem em coluna */
+        align-items: center;
+    }
+
+    .contato-image img {
+        max-width: 100%; /* Garante que a imagem ocupe 100% da largura */
+        max-height: 250px; /* Reduzindo a altura da imagem em telas menores */
+    }
+
+    .separator {
+        font-size: 3rem; /* Ajustando o tamanho do separador para mobile */
+        margin: 0 10px; /* Ajustando o espaçamento */
+    }
+
+    .contato-text h2 {
+        font-size: 1.5rem; /* Ajustando o tamanho do título */
+    }
+
+    .contato-text p {
+        font-size: 1rem; /* Ajustando o tamanho do texto */
+    }
+}
+
+/* Rodapé */
+footer {
+    background-color: #0f1e2a; /* Azul mais escuro para o fundo do rodapé */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Ajustes para mobile */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px; /* Menos padding para telas menores */
+    }
+}
+
+/* Estilo para a galeria */
+#galeria {
+    background-color: #123456; /* Cor de fundo azul para toda a seção */
+    padding: 20px; /* Espaço ao redor da galeria */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo para o título da galeria */
+#galeria h2 {
+    text-align: center; /* Centraliza o título */
+    font-size: 2rem; /* Tamanho ajustado */
+    color: #f1e1b3; /* Cor do título */
+    font-weight: bold; /* Título em negrito */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+/* Estilo para a galeria */
+#galeria {
+    background-color: #123456; /* Cor de fundo azul para toda a seção */
+    padding: 20px; /* Espaço ao redor da galeria */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo para o título da galeria */
+#galeria h2 {
+    text-align: center; /* Centraliza o título */
+    font-size: 2rem; /* Tamanho ajustado */
+    color: #f1e1b3; /* Cor do título */
+    font-weight: bold; /* Título em negrito */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+/* Estilo para as imagens da galeria */
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Espaço entre as imagens */
+    flex-wrap: wrap; /* Permite que as imagens se ajustem conforme o tamanho da tela */
+    margin-top: 20px; /* Para um pequeno espaçamento entre a seção e as imagens */
+    background-color: #123456;
+    padding: 20px; /* Padding para dar mais espaço nas laterais */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.gallery figure {
+    width: 30%; /* Em telas maiores, 3 imagens ao lado da outra */
+    text-align: center; /* Centraliza a legenda abaixo da imagem */
+    margin: 0; /* Remove margem adicional */
+    border-radius: 10px; /* Bordas arredondadas */
+    overflow: hidden; /* Garante que a imagem não ultrapasse as bordas */
+    transition: all 0.3s ease; /* Transição suave para efeito de hover */
+}
+
+.gallery figure:hover {
+    transform: translateY(-10px); /* Leve elevação da imagem no hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
+}
+
+.gallery img {
+    width: 100%; /* Faz com que todas as imagens ocupem 100% do espaço disponível dentro do figure */
+    height: 200px; /* Definição de altura fixa para uniformizar as imagens */
+    object-fit: cover; /* Garante que as imagens cubram o espaço sem distorcer */
+    border-radius: 10px; /* Bordas arredondadas para as imagens */
+}
+
+figcaption {
+    font-size: 1rem; /* Tamanho da legenda */
+    color: white; /* Cor do texto da legenda */
+    margin-top: 5px; /* Espaçamento entre a imagem e a legenda */
+    text-align: center; /* Centraliza a legenda */
+    font-weight: bold; /* Torna a legenda em negrito */
+}
+
+/* Responsividade para telas menores (tablet) */
+@media (max-width: 768px) {
+    .gallery figure {
+        width: 45%; /* Ajustando para duas imagens ao lado em telas menores */
+    }
+}
+
+/* Responsividade para smartphones */
+@media (max-width: 480px) {
+    .gallery figure {
+        width: 100%; /* Apenas uma imagem por vez em dispositivos ainda menores */
+        margin-bottom: 20px;
+    }
+
+    .gallery img {
+        width: 100%; /* Garante que a imagem ocupe 100% da largura */
+        height: auto; /* Garante que a imagem mantenha sua proporção */
+    }
+}
+
 
 /* Responsividade para smartphones */
 @media (max-width: 480px) {
@@ -249,6 +428,105 @@ section {
     }
 }
 
+/* Seção Blog de Receitas */
+#receitas {
+    background-color: #1e3d58; /* Cor de fundo azul para a seção de receitas */
+    padding: 50px 20px;
+    color: white; /* Cor do texto */
+    margin-top: 80px; /* Ajuste para o título não ser cortado pelo cabeçalho */
+}
+
+#receitas h2 {
+    text-align: center; /* Centraliza o título */
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+/* Estilo para as receitas individuais */
+.receita {
+    margin-bottom: 40px;
+}
+
+.receita h3 {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* Layout de cada receita */
+.receita-content {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Estilo para o texto da receita */
+.receita-texto {
+    flex: 1;
+    font-size: 1.2rem; /* Fonte maior para melhor legibilidade */
+    text-align: justify; /* Texto justificado */
+}
+
+.receita-texto h4 {
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 20px;
+}
+
+.receita-texto ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.receita-texto p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-top: 15px;
+}
+
+/* Estilo para a imagem da receita */
+.receita-imagem {
+    flex: 1;
+    text-align: center;
+}
+
+.receita-imagem img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.receita-imagem figcaption {
+    font-size: 1rem;
+    color: white;
+    margin-top: 10px;
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    #receitas {
+        padding: 30px 10px;
+    }
+
+    .receita-content {
+        flex-direction: column;
+    }
+
+    .receita-imagem {
+        margin-bottom: 20px;
+    }
+
+    .receita-texto {
+        text-align: justify;
+    }
+}
+
+
 /* Estilo para os botões flutuantes */
 .social-buttons {
     position: fixed;
@@ -264,8 +542,6 @@ section {
     display: block;
     width: 60px;
     height: 60px;
-    border-radius: 50%;
-    background-color: #1e3d58;
     transition: 0.3s ease;
     display: flex;
     justify-content: center;
@@ -273,8 +549,8 @@ section {
 }
 
 .social-button img {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
 }
 

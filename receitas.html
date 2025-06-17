@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Receitas - Uziel Coffee & Bake Shop</title>
+    <title>Blog de Receitas - Uziel Coffee & Bake Shop</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,26 +14,57 @@
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="quem-somos.html">Quem Somos</a></li>
-                <li><a href="receitas.html">Receitas</a></li>
+                <li><a href="index.html#inicio">Início</a></li>
+                <li><a href="index.html#quem-somos">Sobre Nós</a></li>
+                <li><a href="receitas.html">Blog de Receitas</a></li>
                 <li><a href="galeria.html">Galeria</a></li>
-                <li><a href="contato.html">Contato</a></li>
+                <li><a href="index.html#contato">Contatos</a></li>
             </ul>
         </nav>
     </header>
 
-    <section>
-        <h2>Receitas</h2>
-        <div class="blog">
-            <article>
-                <h3>Ainda não possui receitas...</h3>
-        </div>
+    <!-- Seção Blog de Receitas -->
+    <section id="receitas">
+        <h2>Blog de Receitas</h2>
+
+        <!-- Receita 1: Pão na Chapa -->
+        <article class="receita">
+            <h3>Pão na Chapa:</h3>
+            <div class="receita-content">
+                <div class="receita-texto">
+                    <h4>Ingredientes:</h4>
+                    <ul>
+                        <li>2 fatias do nosso delicioso Shokupan.</li>
+                        <li>Manteiga com sal a gosto.</li>
+                    </ul>
+                    <h4>Modo de Preparo:</h4>
+                    <p>Aqueça uma chapa ou frigideira no fogo médio, passe a manteiga no pão e coloque na chapa ou frigideira quente até que fique no ponto desejado.</p>
+                </div>
+                <div class="receita-imagem">
+                    <img src="imagens/pão2.jpg" alt="Pão na chapa" />
+                    <figcaption>Pão na Chapa</figcaption>
+                </div>
+            </div>
+        </article>
+
     </section>
 
     <footer>
         <p>&copy; 2025 Uziel Coffee & Bake Shop | Todos os direitos reservados</p>
     </footer>
+
+<div class="social-buttons">
+    <!-- Botão WhatsApp -->
+    <a href="https://wa.me/11952429788" target="_blank" class="social-button whatsapp">
+        <img src="imagens/whatsapp-icon.png" alt="WhatsApp" />
+    </a>
+
+    <!-- Botão Instagram -->
+    <a href="https://www.instagram.com/uzielbakeshop/" target="_blank" class="social-button instagram">
+        <img src="imagens/instagram-icon.png" alt="Instagram" />
+    </a>
+</div>
+
 
     <script src="script.js"></script>
 </body>
