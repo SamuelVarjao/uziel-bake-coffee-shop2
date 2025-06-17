@@ -532,12 +532,13 @@ figcaption {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 1000;
+    z-index: 1000; /* Garante que os botões fiquem visíveis acima de outros elementos */
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
+/* Cada botão social */
 .social-button {
     display: block;
     width: 60px;
@@ -559,10 +560,10 @@ figcaption {
     transform: scale(1.1);
 }
 
-/* Correção para os botões flutuantes e menu no mobile */
+/* Correção para o menu e botões flutuantes no mobile */
 @media (max-width: 768px) {
     header nav ul {
-        display: none;
+        display: none; /* Inicialmente oculto */
         flex-direction: column;
         align-items: center;
         margin-top: 10px;
@@ -570,7 +571,7 @@ figcaption {
     }
 
     header nav ul.active {
-        display: flex;
+        display: flex; /* Mostrar quando a classe active estiver presente */
     }
 
     header nav ul li {
@@ -582,20 +583,7 @@ figcaption {
         font-size: 1.2rem; /* Aumenta o tamanho da fonte no mobile */
     }
 
-    /* Ajuste para os botões flutuantes */
-    .social-buttons {
-        right: 10px;
-        bottom: 80px;
-        width: 60px;
-        height: 60px;
-    }
-
-    .social-button img {
-        width: 50px;
-        height: 50px;
-    }
-
-    /* Botão do menu no mobile */
+    /* Botão de menu no mobile */
     .menu-btn {
         display: block;
         font-size: 2rem;
@@ -604,4 +592,32 @@ figcaption {
         border: none;
         cursor: pointer;
     }
+
+    /* Ajustes para os botões flutuantes */
+    .social-buttons {
+        right: 10px;
+        bottom: 80px; /* Ajustei para dar mais espaço para os botões no mobile */
+    }
+
+    .social-button img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Estilo para os botões do iFood */
+.social-button-ifood {
+    display: block;
+    width: 60px;
+    height: 60px;
+    transition: 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-button-ifood img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
 }
