@@ -562,6 +562,12 @@ figcaption {
 
 /* Correção para o menu e botões flutuantes no mobile */
 @media (max-width: 768px) {
+    /* Ajustes para o cabeçalho no mobile */
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
     header nav ul {
         display: none; /* Inicialmente oculto */
         flex-direction: column;

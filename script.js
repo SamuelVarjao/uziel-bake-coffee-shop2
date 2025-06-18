@@ -9,7 +9,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 function toggleMenu() {
-    const nav = document.querySelector('header nav ul');
-    nav.classList.toggle('active');
+    const menu = document.querySelector('header nav ul');
+    menu.classList.toggle('active');
 }
-
